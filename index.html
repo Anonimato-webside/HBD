@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Carta de cumpleaños</title>
+
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Pantalla de bienvenida / carta sellada -->
+<div id="gate" class="center">
+  <div class="envelope">
+  <div class="base"></div>
+  <div class="front"></div>   <!-- bolsillo -->
+  <div class="flap"></div>    <!-- solapa -->
+  <div class="letter"></div>  <!-- carta -->
+  <button class="seal" id="sealBtn">✶</button>
+  <div class="hint-tap">Toca el sello para abrir</div>
+</div>
+</div>
+
+
+  <!-- Modal de contraseña (inicia oculto) -->
+  <div id="passwordModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="pwTitle" aria-hidden="true">
+    <div class="dialog" id="dialog">
+      <h3 id="pwTitle">Ingresa la contraseña</h3>
+      <input id="passwordInput" type="password" placeholder="••••••••" autocomplete="off" />
+      <button id="submitPassword">Desbloquear</button>
+      <div class="error" id="error"></div>
+    </div>
+  </div>
+
+  <!-- Contenido revelado (la carta) -->
+  <!-- Contenido revelado (la carta como imagen) -->
+<main id="content" class="hidden">
+  <div class="page-bg" aria-hidden="true"></div>
+  <div class="letter-image">
+    <!-- Cambia carta.png por el nombre real de tu archivo -->
+    <img src="./img/carta2.png" alt="Carta decorada" loading="eager">
+  </div>
+</main>
+
+  <!-- Música de fondo (oculta) -->
+<audio id="bgMusic" src="./video/lalalan.mp3" preload="auto" loop></audio>
+
+  <!-- Librerías y lógica (defer mantiene el orden) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>
+
