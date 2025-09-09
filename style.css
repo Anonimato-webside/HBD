@@ -31,6 +31,7 @@ body{
   align-items:center;                /* verticalmente centrado */
   min-height:100svh;                 /* alto pantalla en móviles modernos */
   padding:var(--page-pad);
+  flex-direction: column;
 }
 
 /* ---------- Sobre ---------- */
@@ -100,11 +101,20 @@ body{
 .seal::after{ content:""; position:absolute; inset:12px; border:2px dashed rgba(255,255,255,.6); border-radius:50% }
 .seal:hover{ filter:brightness(1.05) }
 
-/* Coloca el hint debajo sin descuadrar el layout */
 .hint-tap{
-  position: static;
   margin-top: 10px;
-  width:100%; text-align:center; font-size:13px; opacity:.8; z-index:6;
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
+  color:#444;
+  opacity:.85;
+  /* (opcional) pequeño parpadeo para llamar la atención */
+  animation: hintBlink 2.2s ease-in-out infinite;
+}
+
+@keyframes hintBlink{
+  0%,100%{ opacity:.85 }
+  50%    { opacity:.45 }
 }
 
 /* ---------- Modal contraseña ---------- */

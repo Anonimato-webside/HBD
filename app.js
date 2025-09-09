@@ -37,7 +37,7 @@
 
     function startMusic(){
       if (!bgMusic) return;
-      bgMusic.volume = 0.3;         // ajusta si quieres
+      bgMusic.volume = 0.5;         // ajusta si quieres
       bgMusic.play().catch(() => {
         // Si algún navegador aún bloquea el autoplay, reintenta en el siguiente toque/click
         const onceTry = () => {
@@ -100,6 +100,8 @@
       const letterEl = document.querySelector(".letter");
 
       const tl = gsap.timeline({ defaults:{ ease:"power2.out" } });
+      tl.to(".hint-tap", { opacity:0, y:-6, duration:0.25 }, 0); // se desvanece
+
 
       // 1) Desaparece el sello
       tl.to(".seal", { scale:0, rotate:-30, opacity:0, duration:0.45, ease:"back.in(1.4)" });
