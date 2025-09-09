@@ -1,7 +1,7 @@
 (() => {
   "use strict";
 
-  const CONFIG = { PASSWORD: "9/9/05" }; // <-- tu contraseña
+  const CONFIG = { PASSWORD: "09/09/05" }; // <-- tu contraseña
   const $ = (id) => document.getElementById(id);
 
   document.addEventListener("DOMContentLoaded", () => {
@@ -37,7 +37,7 @@
 
     function startMusic(){
       if (!bgMusic) return;
-      bgMusic.volume = 0.5;         // ajusta si quieres
+      bgMusic.volume = 0.3;         // ajusta si quieres
       bgMusic.play().catch(() => {
         // Si algún navegador aún bloquea el autoplay, reintenta en el siguiente toque/click
         const onceTry = () => {
