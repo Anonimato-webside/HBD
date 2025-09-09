@@ -96,7 +96,7 @@ body{
   position:absolute; top:52%; left:50%; transform:translate(-50%,-50%);
   width:64px; height:64px; border-radius:999px; border:none;
   background:var(--seal); color:#fff; font-size:24px; cursor:pointer;
-  z-index:5; box-shadow:0 10px 20px rgba(155,44,44,.35)
+  z-index:5; box-shadow:0 10px 20px rgba(155, 44, 44, 0.109)
 }
 .seal::after{ content:""; position:absolute; inset:12px; border:2px dashed rgba(255,255,255,.6); border-radius:50% }
 .seal:hover{ filter:brightness(1.05) }

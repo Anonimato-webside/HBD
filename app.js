@@ -37,7 +37,7 @@
 
     function startMusic(){
       if (!bgMusic) return;
-      bgMusic.volume = 0.5;         // ajusta si quieres
+      bgMusic.volume = 0.35;         // ajusta si quieres
       bgMusic.play().catch(() => {
         // Si algún navegador aún bloquea el autoplay, reintenta en el siguiente toque/click
         const onceTry = () => {
@@ -111,7 +111,7 @@
         .set(".flap", { zIndex: 1 }); // << clave
 
       // 3) La carta empieza a subir aún debajo del bolsillo
-      tl.to(".letter", { y:-170, duration:0.65 }, "=0.05");
+      tl.to(".letter", { y:-200, duration:0.65 }, "=0.05");
 
       // 4) Mini vaivén (opcional, se ve mejor)
       tl.to(".letter", { y:"-=8", duration:0.28, yoyo:true, repeat:1 }, "-=0.15");
